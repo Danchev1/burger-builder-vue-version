@@ -18,6 +18,7 @@ const getters = {
     const set = new Set(arrTemp);
     return Array.from(set);
   },
+  specialOffers: state => state.burgers.filter(burger => burger.price.isOffer),
 };
 
 const mutations = {

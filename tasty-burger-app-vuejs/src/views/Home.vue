@@ -3,23 +3,8 @@
     <Header :pageTitle="pageTitle" />
     <main>
       <Carousel :perPage="4" :perPageCustom="[[768, 6], [1024, 6]]" :paginationEnabled="false">
-        <slide>
-          <Button>Cheese</Button>
-        </slide>
-        <slide>
-          <Button>Chicken</Button>
-        </slide>
-        <slide>
-          <Button>Beef</Button>
-        </slide>
-        <slide>
-          <Button>Cheese</Button>
-        </slide>
-        <slide>
-          <Button>Tuna</Button>
-        </slide>
-        <slide>
-          <Button>Vegan</Button>
+        <slide v-for="type in meatTypes" :key="type">
+          <Button>{{ type }}</Button>
         </slide>
       </Carousel>
       <section>
@@ -28,23 +13,8 @@
       <section>
         <h2>Special Offers</h2>
         <Carousel :perPage="4" :perPageCustom="[[768, 6], [1024, 6]]" :paginationEnabled="false">
-          <slide>
-            <Button>Cheese</Button>
-          </slide>
-          <slide>
-            <Button>Chicken</Button>
-          </slide>
-          <slide>
-            <Button>Beef</Button>
-          </slide>
-          <slide>
-            <Button>Cheese</Button>
-          </slide>
-          <slide>
-            <Button>Tuna</Button>
-          </slide>
-          <slide>
-            <Button>Vegan</Button>
+          <slide v-for="offer in specialOffers" :key="offer.id">
+            {{ offer.name }}
           </slide>
         </Carousel>
       </section>
@@ -84,6 +54,7 @@ export default {
     ]),
     ...mapGetters('burgers', [
       'meatTypes',
+      'specialOffers',
     ]),
   },
   methods: {
