@@ -1,6 +1,6 @@
 {
-  "name": "burger-builder-vue-version",
-  "short_name": "burger-builder-vue-version",
+  "name": "tasty-burger-app-vuejs",
+  "short_name": "tasty-burger-app-vuejs",
   "icons": [
     {
       "src": "./img/icons/android-chrome-192x192.png",
