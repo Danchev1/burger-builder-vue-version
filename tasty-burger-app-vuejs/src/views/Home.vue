@@ -58,7 +58,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex';
+import { mapState, mapGetters, mapActions } from 'vuex';
 import { Carousel, Slide } from 'vue-carousel';
 import Header from '@/components/Layout/Header.vue';
 import Button from '@/components/Layout/Button.vue';
@@ -81,6 +81,9 @@ export default {
   computed: {
     ...mapState('burgers', [
       'burgers',
+    ]),
+    ...mapGetters('burgers', [
+      'meatTypes',
     ]),
   },
   methods: {

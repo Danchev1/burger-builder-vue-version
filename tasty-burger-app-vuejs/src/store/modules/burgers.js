@@ -7,7 +7,18 @@ const state = {
   burgers: [],
 };
 
-const getters = {};
+const getters = {
+  meatTypes: (state) => {
+    const arrTemp = [];
+    state.burgers.forEach((burger) => {
+      burger.ingredients.meat.forEach((item) => {
+        arrTemp.push(item.type);
+      });
+    });
+    const set = new Set(arrTemp);
+    return Array.from(set);
+  },
+};
 
 const mutations = {
   setBurgers: (state, payload) => {
