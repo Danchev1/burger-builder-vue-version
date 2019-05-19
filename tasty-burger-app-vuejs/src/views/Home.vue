@@ -58,6 +58,7 @@
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex';
 import { Carousel, Slide } from 'vue-carousel';
 import Header from '@/components/Layout/Header.vue';
 import Button from '@/components/Layout/Button.vue';
@@ -65,17 +66,30 @@ import Card from '@/components/Layout/Card.vue';
 
 export default {
   name: 'Home',
-  data() {
-    return {
-      pageTitle: 'Tastyburger',
-    };
-  },
   components: {
     Card,
     Button,
     Header,
     Carousel,
     Slide,
+  },
+  data() {
+    return {
+      pageTitle: 'Tastyburger',
+    };
+  },
+  computed: {
+    ...mapState('burgers', [
+      'burgers',
+    ]),
+  },
+  methods: {
+    ...mapActions('burgers', [
+      'getBurgers',
+    ]),
+  },
+  created() {
+    this.getBurgers();
   },
 };
 </script>
