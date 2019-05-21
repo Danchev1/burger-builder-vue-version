@@ -1,5 +1,5 @@
 <template functional>
-  <button class="button">
+  <button :class="`button ${data.class}`">
     <slot />
   </button>
 </template>

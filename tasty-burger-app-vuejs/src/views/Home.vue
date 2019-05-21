@@ -2,14 +2,24 @@
   <div class="home-screen">
     <Header :pageTitle="pageTitle" />
     <main>
-      <Carousel :perPage="4" :perPageCustom="[[768, 6], [1024, 6]]" :paginationEnabled="false">
-        <slide v-for="type in meatTypes" :key="type">
-          <Button>{{ type }}</Button>
-        </slide>
-      </Carousel>
+
+      <section class="burger-filters">
+        <Carousel
+          :perPage="4"
+          :perPageCustom="[[560, 6], [1024, 6]]"
+          :paginationEnabled="false">
+          <slide v-for="type in meatTypes" :key="type">
+            <Button :class="'is-pulled-right has-text-weight-medium is-primary has-text-black'">
+              {{ type }}
+            </Button>
+          </slide>
+        </Carousel>
+      </section>
+
       <section>
         <Card />
       </section>
+
       <section>
         <h2>Special Offers</h2>
         <Carousel :perPage="4" :perPageCustom="[[768, 6], [1024, 6]]" :paginationEnabled="false">
@@ -23,6 +33,7 @@
           <Card />
         </div>
       </section>
+
     </main>
   </div>
 </template>

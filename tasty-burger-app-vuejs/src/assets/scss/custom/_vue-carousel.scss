@@ -1,0 +1,16 @@
+.burger-filters {
+  overflow: hidden;
+  background-color: #fff;
+
+  .VueCarousel {
+    margin: 20px -17px 20px 0;
+  }
+  .VueCarousel-slide {
+    .button {
+      width: 5rem;
+      height: 2.3rem;
+      font-size: .8rem;
+      line-height: 1.7rem;
+    }
+  }
+}
