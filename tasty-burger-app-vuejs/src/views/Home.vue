@@ -1,5 +1,5 @@
 <template>
-  <div class="home-screen">
+  <div class="home-page">
     <Header :pageTitle="pageTitle" />
     <main>
 
@@ -16,13 +16,22 @@
         </Carousel>
       </section>
 
-      <section>
-        <Card />
+      <section class="section">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <Card />
+            </div>
+          </div>
+        </div>
       </section>
 
       <section>
         <h2>Special Offers</h2>
-        <Carousel :perPage="4" :perPageCustom="[[768, 6], [1024, 6]]" :paginationEnabled="false">
+        <Carousel
+          :perPage="4"
+          :perPageCustom="[[768, 6], [1024, 6]]"
+          :paginationEnabled="false">
           <slide v-for="offer in specialOffers" :key="offer.id">
             {{ offer.name }}
           </slide>
