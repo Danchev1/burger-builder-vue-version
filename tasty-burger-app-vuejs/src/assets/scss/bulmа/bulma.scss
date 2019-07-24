@@ -1,23 +1,25 @@
 @charset "utf-8";
-
+/* ===================================================== */
+/* Change initial variables and derived bulma variables  */
+/* ===================================================== */
 // Colors override
 
-$black:        #0A0B0B;
+$black:        hsl(180, 5%, 4%) !default
 $black-bis:    hsl(0, 0%, 7%) !default
 $black-ter:    hsl(0, 0%, 14%) !default
 
 $grey-darker:  hsl(0, 0%, 21%) !default
 $grey-dark:    hsl(0, 0%, 29%) !default
-$grey:         hsl(0, 0%, 48%) !default
-$grey-light:   hsl(0, 0%, 71%) !default
+$grey:         hsl(206, 3%, 67%) !default
+$grey-light:   hsl(206, 10%, 87%) !default
 $grey-lighter: hsl(0, 0%, 86%) !default
 
-$white-ter:    #F6F7F8;
+$white-ter:    hsl(210, 12%, 97%) !default
 $white-bis:    hsl(0, 0%, 98%) !default
 $white:        hsl(0, 0%, 100%) !default
 
 $orange:       hsl(14,  100%, 53%) !default
-$yellow:       #FFD80B;
+$yellow:       hsl(50,  100%, 52%)  !default
 $green:        hsl(141, 71%,  48%) !default
 $turquoise:    hsl(171, 100%, 41%) !default
 $cyan:         hsl(204, 86%,  53%) !default
@@ -27,6 +29,12 @@ $red:          hsl(348, 100%, 61%) !default
 
 // derived variables
 $primary: $yellow;
+$card-color: $grey;
+$title-color: $black;
+
+
+// font override
+$family-sans-serif: 'Roboto', sans-serif;
 
 /* utilities */
 @import "~bulma/sass/utilities/_all";
@@ -62,3 +70,13 @@ $primary: $yellow;
 /* layout */
 @import "~bulma/sass/layout/hero.sass";
 @import "~bulma/sass/layout/footer.sass";
+
+
+
+
+/* ================================================= */
+/*          Override/change bulma styling            */
+/* ================================================= */
+.section {
+  padding: 1.9rem 1rem 0;
+}

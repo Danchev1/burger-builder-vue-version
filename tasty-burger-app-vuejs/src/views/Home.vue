@@ -26,7 +26,7 @@
         </div>
       </section>
 
-      <section>
+      <section class="section">
         <h2>Special Offers</h2>
         <Carousel
           :perPage="4"
@@ -37,7 +37,7 @@
           </slide>
         </Carousel>
       </section>
-      <section class="order-history">
+      <section class="section order-history">
         <div class="history-item">
           <Card />
         </div>
