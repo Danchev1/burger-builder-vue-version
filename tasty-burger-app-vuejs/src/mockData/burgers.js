@@ -3,6 +3,7 @@ export default [
     id: 1,
     name: 'Cheese Burger',
     weight: '520g',
+    imgUrl: 'https://bulma.io/images/placeholders/1280x960.png',
     price: {
       amount: 4.15,
       isOffer: true,
@@ -30,6 +31,7 @@ export default [
     id: 2,
     name: 'Whooper Burger',
     weight: '700g',
+    imgUrl: 'https://bulma.io/images/placeholders/1280x960.png',
     price: {
       amount: 14.15,
       isOffer: false,
@@ -56,6 +58,7 @@ export default [
     id: 3,
     name: 'Vegan Burger',
     weight: '300g',
+    imgUrl: 'https://bulma.io/images/placeholders/1280x960.png',
     price: {
       amount: 6.15,
       isOffer: false,
@@ -81,6 +84,7 @@ export default [
     id: 4,
     name: 'Big Meech Burger',
     weight: '500g',
+    imgUrl: 'https://bulma.io/images/placeholders/1280x960.png',
     price: {
       amount: 11.15,
       isOffer: true,
@@ -106,6 +110,7 @@ export default [
     id: 5,
     name: 'Big Fish Burger',
     weight: '400g',
+    imgUrl: 'https://bulma.io/images/placeholders/1280x960.png',
     price: {
       amount: 17.15,
       isOffer: true,

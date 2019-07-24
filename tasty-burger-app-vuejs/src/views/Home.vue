@@ -15,7 +15,6 @@
           </slide>
         </Carousel>
       </section>
-
       <section class="section">
         <div class="container">
           <div class="columns">
@@ -33,7 +32,7 @@
           :perPageCustom="[[768, 6], [1024, 6]]"
           :paginationEnabled="false">
           <slide v-for="offer in specialOffers" :key="offer.id">
-            {{ offer.name }}
+            <Figure :imgAlt="offer.name" :imgUrl="offer.imgUrl" />
           </slide>
         </Carousel>
       </section>
@@ -53,6 +52,7 @@ import { Carousel, Slide } from 'vue-carousel';
 import Header from '@/components/Layout/Header.vue';
 import Button from '@/components/Layout/Button.vue';
 import Card from '@/components/Layout/Card.vue';
+import Figure from '@/components/Layout/Figure.vue';
 
 export default {
   name: 'Home',
@@ -62,6 +62,7 @@ export default {
     Header,
     Carousel,
     Slide,
+    Figure,
   },
   data() {
     return {

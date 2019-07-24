@@ -1,9 +1,7 @@
-<template functional>
-  <div class="card last-ordered">
+<template>
+  <div class="card">
     <div class="card-image">
-      <figure class="image is-5by3">
-        <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-      </figure>
+      <Figure />
     </div>
     <div class="card-content">
       <div class="media">
@@ -21,8 +19,12 @@
 </template>
 
 <script>
+import Figure from '@/components/Layout/Figure.vue';
+
 export default {
   name: 'Card',
-  inheritAttrs: false,
+  components: {
+    Figure,
+  },
 };
 </script>
